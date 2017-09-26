@@ -1,7 +1,7 @@
 ---
 title: "RMarkdown & Leaflet - Developing Data Products"
 author: "Zacarías Ojeda"
-date: "July 25, 2017"
+date: "September 26, 2017"
 output: html_document
 ---
 
