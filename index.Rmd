@@ -1,0 +1,25 @@
+---
+title: "RMarkdown & Leaflet - Developing Data Products"
+author: "Zacarías Ojeda"
+date: "July 25, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Interactive map with leaflet
+```{r, fig.cap="Clustered Marks"}
+library(leaflet)
+
+set.seed(123)
+
+df <- data.frame(lat = runif(20, max=-31.73, min=-31.82),
+                 lng = runif(20, max=-60.40, min=-60.62))
+df %>%
+  leaflet() %>%
+  addTiles() %>%
+  addMarkers(clusterOptions = markerClusterOptions())
+```
+
